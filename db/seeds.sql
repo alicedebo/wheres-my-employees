@@ -8,7 +8,7 @@ VALUES
     ('Information Technology'),
     ('Accounting');
 
-INSERT INTO employee_role
+INSERT INTO role
     (title, salary, department_id)
 VALUES
     ('HR MANAGER', 100000, 1),
@@ -27,9 +27,9 @@ VALUES
         ('Gabriel', 'DeBoer', 2, 1),
         ('Dean', 'Winchester', 3, NULL),
         ('Sammy', 'Winchester', 4, 3),
-        ('Mary', 'Winchester', 4, 3),
+        ('Mary', 'Winchester', 5, 3),
         ('Adam', 'Demamp', 5, NULL),
         ('Anders', 'Homevich', 6, 5),
-        ('Blake', 'Henderson', 6, 5),
-        ('Kyle', 'Nuvacheck', 7, NULL),
-        ('Chuck', 'Bartowski', 7, 8);
+        ('Blake', 'Henderson', 7, 6),
+        ('Kyle', 'Nuvacheck', 8, NULL),
+        ('Chuck', 'Bartowski', 9, 7);

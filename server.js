@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
-const inquirer = require('inquirer');
-const PORT = process.env.PORT || 3000;
-const cTable = require('console.table');
+const db = require("./db");
+const { prompt } = require('inquirer');
+require('console.table');
 
 init();
 
@@ -119,6 +118,10 @@ function createRole() {
         value: id
       }));
       prompt([
+        {
+          name: "title",
+          message: "What is the name of the role?"
+        },
         {
           name: "salary",
           message: "What is the salary rate"
@@ -253,6 +256,7 @@ function updateEmployeeRole() {
                 }
               ])
                 .then(res => db.updateEmployeeRole(employeeId, res.roleId))
+                .then(() => console.log("Employee's role is updated"))
                 .then(() => runPrompts());
             });
         });
