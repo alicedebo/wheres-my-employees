@@ -2,10 +2,10 @@
   "name": "wheres-my-employees",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   "homepage": "https://github.com/alicedebo/wheres-my-employees#readme",
   "dependencies": {
     "console.table": "^0.10.0",
+    "dotenv": "^10.0.0",
     "inquirer": "^8.1.5",
-    "mysql2": "^2.3.0"
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
   }
 }
