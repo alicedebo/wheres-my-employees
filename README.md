@@ -1,2 +1,5 @@
 # Wheres my Employees
-I started this but didn't have time to finish it before the due date this time. Plan on going back and completing at a later date.
+Have you ever wanted to track all of your employees in one place? Here's your one-stop shop.
+## Check out how this works
+Here is a link to see how this works:<br>
+[Employee-Editor]("https://watch.screencastify.com/v/FSdFEV4G9TGWne7cUAmj")

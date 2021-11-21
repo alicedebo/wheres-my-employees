@@ -1,11 +1,12 @@
 const mysql = require("mysql2");
-const { prompt } = require('inquirer');
 const inquirer = require("inquirer");
+const util = require("util");
 require('console.table');
+require("dotenv").config;
 
 const db = mysql.createConnection({
   host: "localhost",
-  port: 3001,
+  // port: 3001,
   user: "root",
   password: "Solar4life$",
   database: "employees_db"
@@ -18,7 +19,7 @@ db.connect(function (err) {
 });
 
 function runPrompts() {
-  prompt({
+  inquirer.prompt({
       type: "list",
       name: "choice",
       message: "What would you like to do?",
@@ -165,7 +166,7 @@ function createEmployee() {
       message: 'What is the manager\'s id?'
     }
   ]).then(data => {
-    console.log('Adding employee to db'/n);
+    console.log('Adding employee to db');
     let query = `INSERT INTO employee(first_name, last_name, role_id, manager_id) VALUES('${data.firstName}','${data.lastName}','${data.roleId}','${data.managerId}')`;
     db.query(query, function (err, result) {
       if (err) throw err;
@@ -217,3 +218,4 @@ function newRole() {
     });
   });
 }
+
